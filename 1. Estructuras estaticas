@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include<string.h>
+
+//Declaramos la estructura
+struct Persona{
+	int edad;
+	char nombre[20];
+	float sueldo;
+};
+
+//Declaramos variables de la estructura
+struct Persona p1,p2;
+//Inicializar una variable de la estructura
+struct Persona p3 = {20,"Pepe",8000.50};
+
+int main(int argc, char *argv[]) {
+	
+	//Asignar directamente datos a la persona 1
+	p1.edad = 30;
+	strcpy(p1.nombre, "Charlie");
+	p1.sueldo = 300;
+	//Mostrar datos en pantalla de persona 1
+	printf("Edad P1 >> %i\n", p1.edad);
+	printf("Nombre P1 >> %s\n", p1.nombre);
+	printf("Sueldo P1 >> %.2f\n", p1.sueldo);
+	
+	//Asignar datos a Persona 2
+	printf("----------------------\n\n");
+	
+	printf("Dame la edad > ");
+	scanf("%i", &p2.edad);
+	printf("Dame el nombre > ");
+	scanf("%s", p2.nombre);
+	getchar();
+	printf("Dame el sueldo > ");
+	scanf("%f", &p2.sueldo);
+	
+	//Mostrar datos en pantalla de persona 2
+	printf("\n\nEdad P2 >> %i\n", p2.edad);
+	printf("Nombre P2 >> %s\n", p2.nombre);
+	printf("Sueldo P2 >> %.2f\n", p2.sueldo);
+	
+	
+	//Mostrar datos en pantalla de persona 2
+	printf("----------------------\n\n");
+	printf("\nEdad P3 >> %i\n", p3.edad);
+	printf("Nombre P3 >> %s\n", p3.nombre);
+	printf("Sueldo P3 >> %.2f\n", p3.sueldo);
+	
+	
+	return 0;
+}
+
