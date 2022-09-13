@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include<string.h>
+
+struct Pokemon{
+	char nombre[20];
+	char tipo[30];
+	int atk;
+};
+
+struct Pokemon poke[151];
+
+int main(int argc, char *argv[]) {
+	
+	for(int i=0; i<151; i++){
+		strcpy(poke[i].nombre, "Missigno");
+		strcpy(poke[i].tipo, "Psiquico");
+		poke[i].atk = 100;
+	}
+	
+	strcpy(poke[0].nombre, "Bulbasaur");
+	strcpy(poke[0].tipo, "Planta");
+	poke[0].atk = 60;
+	
+	strcpy(poke[3].nombre, "Charmander");
+	strcpy(poke[0].tipo, "Fuego");
+	poke[0].atk = 50;
+	
+	for(int i=0; i<151; i++){
+		printf("%i\n", i+1);
+		printf("%s\n", poke[i].nombre);
+		printf("%s\n", poke[i].tipo);
+		printf("%i\n", poke[i].atk);
+		printf("------------------------------------\n");
+	}
+	
+	return 0;
+}
+
